@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 // Function decleartion
 
 //function-1
@@ -152,13 +153,13 @@ int book_ticket1(){//bus-1
     int fail1;
     FILE *p;
     p=fopen("bus.txt","a");
-    static setno=0;
+    static int setno=0;
 struct passenger {                  //use of  concept of structure keyword
       char name[10];
   int contact_no;
 };
 struct passenger x[44];              //use of concept of array
-static i=0;
+static int i=0;
  
       
  
@@ -207,13 +208,13 @@ int book_ticket2(){//Bus- 2
     int fail2;
     FILE *p1;
     p1=fopen("bus1.txt","a");
-    static setno1=0;
+    static int setno1=0;
  struct passenger {          //use of concept of structure
       char name[10];
   int contact_no;
 };
 struct passenger x1[44];  //use of concept of array
-static i=0;
+static int i=0;
  
 printf("**ENTER YOUR PERSONAL DETAILS**\n");
 printf("enter the name of passenger\n");
@@ -261,13 +262,13 @@ int book_ticket3(){//bus-3
     int fail3;
     FILE *p2;
     p2=fopen("bus2.txt","a");
-    static setno2=0;
+    static int setno2=0;
 struct passenger {           //use of concept of structure
       char name[10];
   int contact_no;
 };
 struct passenger x2[44];    ////use of concept of array
-static i=0;
+static int i=0;
  
 
 printf("**ENTER YOUR PERSONAL DETAILS**\n");
@@ -527,4 +528,8 @@ int view_passenger3(){
 3.to correct the error and achieve result.
 4.use of testing of block of code before writing complete code.like printf("%d",i);
 5.evolving of new idea of code each time.
+
+*/
+/* learning at 1:00 am 2080-01-09
+1.solving of problem of warning form the chat gpt.
 */
