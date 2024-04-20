@@ -15,10 +15,16 @@ int payment();
 int pay1();
 int pay2();
 int pay3();
+//function-5
+int data_access();
+int view_passenger();
+int view_passenger2();
+int view_passenger3();
+//section-1
 int main() {
 
     printf("\t\t\t\t\t\t\t**PROJCET POWERED BY::GROUP-11**\n");
-//use of switch case
+//use of main switch case
     int choice;
     do {
         printf("\n--$$$ Bus Reservation System $$$--\n");
@@ -38,7 +44,7 @@ int main() {
                
                 break;
             case 3:
-pass_details();
+           data_access();
                 break;
             case 4:
            
@@ -50,9 +56,9 @@ pass_details();
     } while (choice != 4);
  
     return 0;
-}
+}//section-1
 
-
+//main switch case-1
 int bus_details(){
     printf(" \t\t\t\t\t###\tWELCOME TO THE AIR SUSPENSION EXPRESS\t###\n");
     printf("\t\t\t\t \t*We have 44 SEATS for GENERAL and 4 for RESERVE\n");
@@ -67,9 +73,81 @@ int bus_details(){
 
     
     return 0;
-}
-// Function to reserve a seat2
-int book_ticket(){//bus-1
+}//main switch case-1
+
+//main switch case-2
+
+int select_destination(){ 
+int choice1;
+    do {
+        printf("\n--- select your destination---\n");
+        printf("1. pokhara to kathmandu\n");
+        printf("2. pokhara to chitwan\n");
+        printf("3. pokhara to janakpur\n");
+        printf("4. Exit\n");
+        printf("Enter your destination: ");
+        scanf("%d", &choice1);
+
+        switch (choice1) {
+            case 1:
+           
+            book_ticket1();
+                break;
+            case 2:
+             book_ticket2();
+                break;
+            case 3:
+         book_ticket3();
+                break;
+            case 4:
+                                printf("Exiting...\n");
+                break;
+            default:
+                printf("Invalid choice. Please enter a number between 1 and 4.\n");
+         }
+    } while (choice1 != 4);
+
+}//main switch case-2
+
+
+//main switch case-3 begin
+int data_access(){
+    int choice;
+    do {
+        printf("\n--$$$ data of passenger $$$--\n");
+        printf("1. bus-1\n");
+        printf("2. bus-2\n");
+        printf("3. bus-3\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+              view_passenger();
+                break;
+            case 2:
+            view_passenger2();
+               
+                break;
+            case 3:
+            view_passenger3();
+                break;
+            case 4:
+           
+                printf("Exiting...\n");
+                break;
+            default:
+                printf("Invalid choice. Please enter a number between 1 and 4.\n");
+        }
+    } while (choice != 4);
+ 
+    return 0;
+}//main switch case-3 end
+
+
+//switch-2 destination case-1 begin
+int book_ticket1(){//bus-1
     //int price;
     int fail1;
     FILE *p;
@@ -121,9 +199,10 @@ scanf("%s",x[i].name);                              //use of formatted input fun
   x1://got variable
  fclose(p);
    return 0;
-}
-// Function to reserve a seat2
-int book_ticket1(){//Bus- 2
+}//switch-2 destination case-1 end
+
+//switch-2 destination case-2 begin
+int book_ticket2(){//Bus- 2
     //int price;
     int fail2;
     FILE *p1;
@@ -174,9 +253,10 @@ scanf("%s",x1[i].name);
   x2:
  fclose(p1);
    return 0;
-}
-// Function to reserve a seat2
-int book_ticket2(){//bus-3
+}//switch-2 destination case-2 end
+
+//switch-2 destination case-3 begin
+int book_ticket3(){//bus-3
     //int price;
     int fail3;
     FILE *p2;
@@ -228,45 +308,11 @@ scanf("%s",x2[i].name);
   x3:
  fclose(p2);
    return 0;
-}
+}//switch-2 destination case-3 end
 
-// Function to cancel reservation
-int pass_details(){
 
-    
-return 0;
-}
-int select_destination(){ //2
-int choice1;
-    do {
-        printf("\n--- select your destination---\n");
-        printf("1. pokhara to kathmandu\n");
-        printf("2. pokhara to chitwan\n");
-        printf("3. pokhara to janakpur\n");
-        printf("4. Exit\n");
-        printf("Enter your destination: ");
-        scanf("%d", &choice1);
+//switch-3 inside destination payment() start
 
-        switch (choice1) {
-            case 1:
-           
-            book_ticket();
-                break;
-            case 2:
-             book_ticket1();
-                break;
-            case 3:
-         book_ticket2();
-                break;
-            case 4:
-                                printf("Exiting...\n");
-                break;
-            default:
-                printf("Invalid choice. Please enter a number between 1 and 4.\n");
-         }
-    } while (choice1 != 4);
-
-}
 //payment section ESEWA start
 int payment(){
  printf("***PAYMENT VIA ESEWA***\n");
@@ -302,7 +348,9 @@ int payment(){
          }
     } while (choice2 != 4);
 
-}
+}//switch-3 inside destination payment() end
+
+//switch-3 payment case-1 start
 int pay1(){
     int price;
     int fail=0;
@@ -331,7 +379,8 @@ else{
   else{
     return 0;
   }
-}
+}//switch-3 payment case-1 start
+//switch-3 payment case-2 start
 int pay2(){
     int price1;
      int fail1=0;
@@ -359,7 +408,8 @@ else{
     return 0;
   }
    
-}
+}//switch-3 payment case-2 end
+//switch-3 payment case-3 start
 int pay3(){
       int fail2=0;
     int price2;
@@ -388,7 +438,63 @@ else{
   }
    
    
+}//switch-3 payment case-3 end
+
+//switch-4 data access case-1 start
+
+int view_passenger(){
+    FILE *p;
+    char c;
+   p=fopen("bus.txt","r");
+   if(p==NULL){
+       printf("error");
+       
+   }
+   while((c=fgetc(p))!=EOF){
+      
+       printf("%c",c);
+   }
+   fclose(p);
+   return 0;
+}//switch-4 data access case-1 end
+//switch-4 data access case-2 start
+int view_passenger2(){
+    FILE *p1;
+    char c;
+   p1=fopen("bus1.txt","r");
+   if(p1==NULL){
+       printf("error");
+       
+   }
+   while((c=fgetc(p1))!=EOF){
+       printf("%c",c);
+   }
+   fclose(p1);
+   return 0;
+}//switch-4 data access case-2 end
+
+//switch-4 data access case-3 start
+int view_passenger3(){
+    FILE *p2;
+    char c;
+   p2=fopen("bus2.txt","r");
+   if(p2==NULL){
+       printf("error");
+       
+   }
+   while((c=fgetc(p2))!=EOF){
+       printf("%c",c);
+   }
+   fclose(p2);
+   return 0;
 }
+
+//switch-4 data access case-3 end
+
+
+
+
+
 //ESEWA end
 //process
 /*date 2081-01-07
