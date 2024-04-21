@@ -1,3 +1,4 @@
+//improved final
 #include <stdio.h>
 
 // Function decleartion
@@ -332,7 +333,7 @@ int payment(int a){
     int fail=0;
    
 if(a==2 || a==3){
-    printf("invalid");
+    printf("\t\t\t\t\t\t\t\t\t\t***invalid***");
 }
 else{
      printf("Enter the ticket price\n");
@@ -350,8 +351,8 @@ else if(price==1000){
 
 }
 else{
-    printf("Transaction successful\n");
-    printf("You will get return of:: %d\n",price-1000);
+    printf("**Transaction successful**\n");
+    printf("Note::You will get return of:: %d\n",price-1000);
 }
 //for  unsufficent money
   if (fail==1){
@@ -373,7 +374,7 @@ return 0;
      int fail1=0;
   
 if(a==1 || a==3){
-    printf("invalid");
+     printf("\t\t\t\t\t\t\t\t\t\t***invalid***");
     
 }
 else{
@@ -390,8 +391,8 @@ else if(price1==500){
 
 }
 else{
-    printf("Transaction successful/n");
-    printf("You will get return of:: %d\n",price1-500);
+    printf("**Transaction successful**\n");
+    printf("Note::You will get return of:: %d\n",price1-500);
 }
 //for  unsufficent money
   if (fail1==1){
@@ -410,7 +411,7 @@ else{
     int price2;
  
 if(a==1 || a==2){
-    printf("invalid");
+   printf("\t\t\t\t\t\t\t\t\t\t***invalid***");
 }else{
        printf("Enter the ticket price\n");
 scanf("%d",&price2);
@@ -425,8 +426,8 @@ else if(price2==1000){
 
 }
 else{
-    printf("Transaction successful/n");
-    printf("You will get return of ::%d\n",price2-1000);
+    printf("**Transaction successful**\n");
+    printf("Note::You will get return of ::%d\n",price2-1000);
 }
 
 //for  unsufficent money
@@ -530,13 +531,18 @@ int view_passenger3(){
 3.listening skill is important to understand gropmate idea.
 4.team work grow anything exponentially.
 5.shearing new ideas,have fun etc;
+6.NEVER EVER GIVE UP INSTEAD TRY AND FOLLOW YOUR "KARMA".
 */
 /*LEARNING WHILE COADING
 1.minor mistake of error in structure syntax.
 2.use of proper documentation of any programming langauge while coading.
 3.to correct the error and achieve result.
 4.use of testing of block of code before writing complete code.like printf("%d",i);
-5.evolving of new idea of code each time.
+5.evolving of new idea of code each and every moment.
+6.questioning is very important for each task.
+7.respect the openion of your mate and analyse it ,process it then respond accordingly.bcz good openion brings good out the bad circumstances.
+
+
 
 */
 /* learning at 1:00 am 2080-01-09
